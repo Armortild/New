@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let ggg = function (a, b) {
+        return b(a);
+    }
+    let squa = function (num) {
+        return Math.pow(num,2);
+    }
+    let num = 4;
+    console.log(ggg(ggg(num, squa), squa));
+</script>
+</body>
+</html>

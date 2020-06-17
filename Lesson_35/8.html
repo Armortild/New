@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button>0</button>
+<button>0</button>
+<button>0</button>
+<script>
+    // let but = document.querySelectorAll('button');
+    // for (let i = 0; i < but.length; i++) {
+    //     but[i].onclick = (function () {
+    //         let counter = 0;
+    //         return function () {
+    //             this.innerHTML = ++counter;
+    //             return counter;
+    //         }
+    //     })();
+    // };
+// ____________________________________________
+
+
+    let f1 = function () {
+        let k = 1;
+        return function () {
+    this.innerHTML = k;
+    return k++;
+        }
+    }
+
+    let all_buttons = document.getElementsByTagName('button');
+    for(let i = 0; i < all_buttons.length; i++) {
+        all_buttons[i].addEventListener("click", f1(this))
+    }
+</script>
+</body>
+</html>

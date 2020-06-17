@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // Вариант 1
+    // let func = function () {
+    //     let i = 0;
+    //     let sum = 0;
+    //     return function rec(arr) {
+    //         if (arr.length !== i) {
+    //             sum += arr[i];
+    //             i++;
+    //             rec(arr);
+    //         } return sum;
+    //
+    //     }
+    //
+    // }
+    // console.log(func()([1, 2, 3]));
+
+
+    // Вариант 2
+    // let func = function (arr, i = 0, sum = 0) {
+    //
+    //     return function rec() {
+    //         if (arr.length !== i) {
+    //             sum += arr[i];
+    //             i++;
+    //             rec(arr);
+    //         } return sum;
+    //
+    //     }
+    //
+    // }
+    // console.log(func([1, 2, 3])());
+
+    // Вариант 3
+    // function getSum(arr) {
+    //     let sum = arr.shift();
+    //     if (arr.length != 0) {
+    //         sum += getSum(arr);
+    //     }
+    //     return sum;
+    // }
+    // console.log(getSum([1, 2, 3]));
+
+    function shuffle(arr) {
+        let result = [];
+
+        while (arr.length > 0) {
+            let random = getRandomInt(0, arr.length - 1);
+            let elem = arr.splice(random, 1)[0];
+            result.push(elem);
+        }
+
+        return result;
+    }
+
+    function getRandomInt(min, max) {
+        return Math.floor(Math.random() * (max - min + 1)) + min;
+    }
+
+    console.log(shuffle([1, 2, 3, 4, 5]));
+</script>
+</body>
+</html>

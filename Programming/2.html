@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="" >
+    <input type="text" value="1">
+    <input type="text" value="2">
+    <input type="text" value="3">
+</form>
+
+<form action="" >
+    <input type="text" value="1">
+    <input type="text" value="2">
+    <input type="text" value="3">
+</form>
+
+<form action="" >
+    <input type="text" value="1">
+    <input type="text" value="2">
+    <input type="text" value="3">
+</form>
+<input type="button" value="Press button">
+<script>
+var sum = 0;
+for (var i = 0; i < document.forms.length; i++) {
+    // console.log(document.forms[i].elements);
+    for(var j = 0; j < document.forms[i].elements.length; j++) {
+        // console.log(document.forms[i].elements[j].value);
+        sum += Number(document.forms[i].elements[j].value);
+        console.log(sum);
+    }
+}
+</script>
+</body>
+</html>

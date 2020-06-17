@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let each = (array, fn) => {
+        return fn(array);
+    }
+
+    let fnFoo = (param) =>{
+        let arr = [];
+        for (let i = 0; i < param.length; i++) {
+            arr.push(Math.pow(param[i], 2));
+        }
+        return arr;
+    }
+    console.log(each([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], fnFoo));
+</script>
+</body>
+</html>

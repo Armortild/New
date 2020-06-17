@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button>Left</button>
+<button>Right</button>
+<br/>
+<input type="text">
+<br/>
+<br/>
+<button>Left</button>
+<button>Right</button>
+<br/>
+<input type="text">
+<script>
+    let inp = document.querySelectorAll('input');
+
+    let f1 = function (event) {
+        event.value
+    }
+
+    for (let i = 0; i < inp.length; i++) {
+        inp[i].addEventListener("change", f1());
+    }
+</script>
+</body>
+</html>

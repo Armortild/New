@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<select id="countires-select"></select>
+<select id="cities-select"></select>
+<script>
+    var countriesSelect = document.querySelector('#countries-select');
+    var citiesSelect    = document.querySelector('#cities-select');
+    var data = {
+           USA: ['Washington', 'Los-Angeles', 'Texas'],
+        Canada: ['Toronto', 'Van-Cuver', 'Kvebec'],
+       Ukraine: ['Kyiv', 'Lvov', 'Odessa']
+    };
+
+    var countries = Object.keys(data);
+    addOptions(countriesSelect, countries);
+
+    var defaultCities = data[countries[0]];
+    addOptions(citiesSelect, defaultCities);
+
+    countriesSelect.addEventListener('change', function() {
+        var cities = data[this.value];
+        citiesSelect.length = 0;
+        addOptions(citiesSelect, cities);
+    });
+
+    function addOptions(select, arr) {
+        for (var i = 0; i < arr.length; i++) {
+            select.add(new Option(arr[i]));
+        }
+    }
+</script>
+</body>
+</html>

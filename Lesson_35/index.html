@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--<script>-->
+<!--    var message = 'Наше сообщение';-->
+<!--</script>-->
+<!--<script src="module.js"></script>-->
+<!--<script>-->
+<!--    alert(message);-->
+<!--</script>-->
+
+
+<!--______________________________________________-->
+<!--<script>-->
+<!--    var func = (function(){-->
+<!--        var counter=0;-->
+<!--        return function(){-->
+<!--            counter++;-->
+<!--            return counter;-->
+<!--        }-->
+<!--})();-->
+<!--    console.log(func());-->
+<!--    console.log(func());-->
+<!--    console.log(func());-->
+<!--</script>-->
+
+
+<!--__________________________________________________________-->
+<button>0</button>
+<button>0</button>
+<button>0</button>
+
+
+<script>
+    var buttons = document.getElementsByTagName('button');
+    for (let i = 0; i < buttons.length; i++) {
+        buttons[i].onclick = (function () {
+            var counter = 0;
+            return function () {
+                counter++;
+                this.innerHTML = counter;
+            }
+        })();
+    }
+</script>
+</body>
+</html>

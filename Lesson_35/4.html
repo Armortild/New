@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let ggg = function (num, kvadrat, kub,) {
+        console.log(kvadrat(num));
+        console.log(kub(num));
+    }
+
+    function kvadratFoo(param) {
+        return Math.pow(param, 2);
+    }
+
+    function kubFoo(param) {
+        return Math.pow(param, 3);
+    }
+    ggg(3,kvadratFoo,kubFoo)
+
+</script>
+</body>
+</html>

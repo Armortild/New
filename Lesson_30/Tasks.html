@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<!--Task_1-->
+<!--Дан див. Внутри него вначале находится просто текст, а затем span:-->
+<!--<div> text <span>span</span></div>-->
+<!--Получите первого потомка нашего дива с помощью firstChild и с помощью firstElementChild. Сравните результаты.-->
+
+<!--<body>-->
+<!--<div id="elem"> text <span>span</span></div>-->
+<!--<script>-->
+<!--let elem = document.getElementById('elem');-->
+<!--console.log(elem.firstChild);-->
+<!--console.log(elem.firstElementChild);-->
+<!--</script>-->
+<!--</body>-->
+
+
+<!--Task_2-->
+<!--Дан див. Внутри него вначале находится просто текст, а затем span:-->
+<!--<div> text <span>span</span></div>-->
+<!--Выведите на экран находящийся в начале дива текст.-->
+
+<!--<body>-->
+<!--<div id="elem"> text <span>span</span></div>-->
+<!--<script>-->
+<!--    let elem = document.getElementById('elem');-->
+<!--    console.dir(elem.firstChild.data);-->
+<!--</script>-->
+<!--</body>-->
+
+
+<!--Task_3-->
+<!--Дан див. Внутри него вначале находится просто текст, а затем span:-->
+<!--<div> text <span>span</span></div>-->
+<!--Поменяйте текст на восклицательный знак.-->
+
+<!--<body>-->
+<!--<div id="elem"> text <span>span</span></div>-->
+<!--<script>-->
+<!--    let elem = document.getElementById('elem');-->
+<!--   elem.firstChild.data = '!'-->
+<!--</script>-->
+<!--</body>-->
+
+
+<!--Task_4-->
+<!--Дан див. Внутри него вначале находится span, а затем просто текст:-->
+<!--<div><span>span</span> text </div>-->
+<!--Поменяйте текст на восклицательный знак.-->
+
+<!--<body>-->
+<!--<div id="elem"><span>span</span> text </div>-->
+<!--<script>-->
+<!--    let elem = document.getElementById('elem');-->
+<!--elem.firstChild.data = '!';-->
+<!--    console.log(elem.firstChild.data = '!');-->
+<!--    console.log(elem);-->
+<!--</script>-->
+<!--</body>-->
+
+
+<!--Task_5-->
+<!--Дан див с комментарием:-->
+<!--<div>&lt;!&ndash;comment&ndash;&gt;<span>span</span> text </div>-->
+<!--Выведите на экран текст комментария.-->
+
+<!--<body>-->
+<!--<div id="elem">&lt;!&ndash;comment&ndash;&gt;<span>span</span> text </div>-->
+<!--<script>-->
+<!--    let elem = document.getElementById('elem');-->
+<!--    console.log(elem.firstChild.data);-->
+<!--    console.log(elem.firstChild.nodeValue);-->
+<!--    console.log(elem.firstChild.textContent);-->
+<!--</script>-->
+<!--</body>-->
+
+
+<!--Task_6-->
+<!--Дан див с комментарием:-->
+<!--<div>&lt;!&ndash;comment&ndash;&gt;<span>span</span> text </div>-->
+<!--Поменяйте текст комментария на восклицательный знак.-->
+
+<!--<body>-->
+<!--<div id="elem">&lt;!&ndash;comment&ndash;&gt;<span>span</span> text </div>-->
+<!--<script>-->
+<!--    let elem = document.getElementById('elem');-->
+<!--    console.log(elem.firstChild.data);-->
+<!--    console.log(elem.firstChild.nodeValue);-->
+<!--    console.log(elem.firstChild.textContent);-->
+<!--</script>-->
+<!--</body>-->
+
+<!--Task_7-->
+<!--Дан див:-->
+<!--<div> 1 <span>2</span> 3 <span>4</span></div>-->
+<!--Переберите циклом всех потомков дива сначала через childNodes, а потом через children.-->
+
+
+<!--<body>-->
+<!--<div id="elem"> 1 <span>2</span> 3 <span>4</span></div>-->
+<!--<script>-->
+<!--let elem = document.getElementById('elem');-->
+<!--for (let i = 0; i < elem.childNodes.length; i++) {-->
+<!--    console.log(elem.childNodes[i]);-->
+<!--}-->
+
+<!--for (let i = 0; i < elem.children.length; i++) {-->
+<!--    console.log(elem.children[i]);-->
+<!--}-->
+<!--</script>-->
+<!--</body>-->
+
+
+<!--Task_8-->
+<!--<div> 1 <span>2</span> 3 <span>4</span></div>-->
+<!--Выведите на экран содержимого второго (если начинать отсчет с единицы) узла-потомка нашего дива.-->
+
+<!--<body>-->
+<!--<div id="elem"> 1 <span>2</span> 3 <span>4</span></div>-->
+<!--<script>-->
+<!--    let elem = document.getElementById('elem');-->
+<!--    console.log(elem.firstChild.nextSibling);-->
+<!--</script>-->
+<!--</body>-->
+
+<!--Task_9-->
+<!--<div> 1 <span>2</span> 3 <span>4</span></div>-->
+<!--Выведите на экран содержимого второго (если начинать отсчет с единицы) DOM-элемента-потомка нашего дива.-->
+
+<!--<body>-->
+<!--<div id="elem"> 1 <span>2</span> 3 <span>4</span></div>-->
+<!--<script>-->
+<!--    let elem = document.getElementById('elem');-->
+<!--    console.log(elem.firstElementChild.nextElementSibling);-->
+<!--</script>-->
+<!--</body>-->
+
+
+<!--Task_10-->
+<!--<div><span>1</span> 2 <span>3</span><span>4</span> 5</div>-->
+<!--Получите span с числом 3 внутри. Выведите на экран текст его правого и левого узла-соседа.-->
+<!--<body>-->
+<!--<div id="elem"><span>1</span> 2 <span>3</span><span>4</span> 5</div>-->
+<!--<script>-->
+<!--    let elem = document.getElementById('elem');-->
+<!--    console.log(elem.firstElementChild.nextElementSibling);-->
+<!--    let next = elem.firstElementChild.nextElementSibling;-->
+<!--    console.log(next.previousSibling.textContent);-->
+<!--    console.log(next.nextSibling.textContent);-->
+<!--</script>-->
+<!--</body>-->
+
+<!--Task_11-->
+<!--<div><span>1</span> 2 <span>3</span><span>4</span> 5</div>-->
+<!--Получите span с числом 3 внутри. Выведите на экран текст его правого и левого DOM-элемента-соседа.-->
+<!--<body>-->
+<!--<div id="elem"><span>1</span> 2 <span>3</span><span>4</span> 5</div>-->
+<!--<script>-->
+<!--    let elem = document.getElementById('elem');-->
+<!--    console.log(elem.firstElementChild.nextElementSibling);-->
+<!--    let next = elem.firstElementChild.nextElementSibling;-->
+<!--    console.log(next.previousElementSibling.textContent);-->
+<!--    console.log(next.nextElementSibling.textContent);-->
+<!--</script>-->
+<!--</body>-->
+
+
+<!--Task_12-->
+<!--<div> 1 <span>2</span> 3 <span>4</span> 5</div>-->
+<!--Получите текстовый узел с числом 3 внутри. Выведите на экран текст его правого соседа.-->
+<!--<body>-->
+<!--<div id="elem"> 1 <span>2</span> 3 <span>4</span> 5</div>-->
+<!--<script>-->
+<!--    let elem = document.getElementById('elem');-->
+<!--    let elem1 = elem.childNodes[2];-->
+<!--    console.log(elem1.nextSibling);-->
+<!--</script>-->
+<!--</body>-->
+
+<!--Task_13-->
+<!--Дан див:-->
+<!--<div>&lt;!&ndash;comment&ndash;&gt;<span>span</span> text </div>-->
+<!--Переберите циклом все его узлы, получите их текст, выведите текст на экран, а рядом с каждый текстом - тип соответствующего узла.-->
+<!-- <body>-->
+<!-- <div id="elem">&lt;!&ndash;comment&ndash;&gt;<span>span</span> text </div>-->
+<!-- <script>-->
+<!--     let elem = document.getElementById('elem');-->
+<!--     for (let i = 0; i < elem.childNodes.length; i++) {-->
+<!--         console.log(elem.childNodes[i]);-->
+<!--         console.log(elem.childNodes[i].textContent);-->
+<!--         console.log(elem.childNodes[i].nodeType);-->
+<!--     }-->
+<!-- </script>-->
+<!-- </body>-->
+
+
+
+<!--Task_14-->
+<!--Даны абзацы. Получите их в виде NodeList.-->
+<!--<body>
+<p id="par1">Lorem ipsum dolor sit amet, consectetur
+    adipisicing elit. Accusamus aperiam distinctio id minima neque nihil sapiente! </p>
+<p id="par2">Lorem ipsum dolor sit amet, consectetur
+    adipisicing elit. Accusamus aperiam distinctio id minima neque nihil sapiente! </p>
+<script>
+    let par1 = document.getElementById('par1');
+    let par2 = document.getElementById('par2');
+    console.log(par1.childNodes);
+    console.log(par2.childNodes);
+
+</script>
+</body>-->
+
+
+<!--Task_15-->
+<!--Даны абзацы. Получите их в виде HTMLCollection.-->
+
+<!--<p id="par1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aperiam distinctio id minima neque nihil sapiente! Accusantium aliquam aliquid architecto at aut consectetur deleniti doloremque ea, eaque eius excepturi in ipsam labore laboriosam laudantium maiores minus odio officiis pariatur porro quisquam repellendus totam, vel veniam voluptatibus. Commodi esse nihil voluptates!</p>-->
+<!--<p id="par2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aperiam distinctio id minima neque nihil sapiente! Accusantium aliquam aliquid architecto at aut consectetur deleniti doloremque ea, eaque eius excepturi in ipsam labore laboriosam laudantium maiores minus odio officiis pariatur porro quisquam repellendus totam, vel veniam voluptatibus. Commodi esse nihil voluptates!</p>-->
+<!--<script>-->
+<!--    let par1 = document.getElementById('par1');-->
+<!--    let par2 = document.getElementById('par2');-->
+<!--    console.log(par1.children);-->
+<!--    console.log(par2.children);-->
+<!--</script>-->
+<!--</body>-->
+
+
+<!--Task_17-->
+<!--Даны абзацы. Получите их в виде NodeList, а затем преобразуйте этот NodeList в массив.-->
+
+<!--<body>-->
+<!--<div id="elem">text <span>span1</span> text <span>span2</span> text </div>-->
+<!--<script>-->
+<!--let elem = document.getElementById('elem');-->
+<!--let childNodes = elem.childNodes;-->
+<!--for (let i = 0; i < childNodes.length; i++) {-->
+<!--    console.log(childNodes[i]);-->
+<!--}-->
+<!--let arr = Array.from(childNodes);-->
+<!--console.log(arr);-->
+<!--</script>-->
+<!--</body>-->
+
+
+<!--Task_18-->
+<!--Дан див:-->
+<!--<div><span>span</span> text </div>-->
+<!--Вставьте перед спеном текст '!!!', создав его предварительно как текстовый узел с помощью createTextNode.-->
+<!--<body>-->
+<!--<div id="elem"><span>span</span> text </div>-->
+<!--<script>-->
+<!--    let elem = document.getElementById('elem');-->
+<!--    let node = document.createTextNode('!!!');-->
+<!--    elem.insertBefore(node,elem.childNodes[0]);-->
+<!--</script>-->
+<!--</body>-->
+
+<!--Task_19-->
+<!--<div> text <span>span</span></div>-->
+<!--Вставьте после слова text новый текстовый узел с текстом '!!!'.-->
+<!--<body>-->
+<!--<div id="elem"> text <span>span</span></div>-->
+<!--<script>-->
+<!--    let elem = document.getElementById('elem');-->
+<!--    let node = document.createTextNode('!!!');-->
+<!--    elem.insertBefore(node, elem.childNodes[0]);-->
+<!--</script>-->
+<!--</body>-->
+
+<!--Task_20-->
+<!--Дан див:-->
+<!--<div> text <span>span</span></div>-->
+<!--Удалите из него текстовый узел ' text '.-->
+<!--<body>-->
+<!--<div id="elem"> text <span>span</span></div>-->
+<!--<script>-->
+<!--    let elem = document.getElementById('elem');-->
+<!--    elem.removeChild((elem.childNodes[0]));-->
+<!--</script>-->
+<!--</body>-->
+
+
+<!--Task_21-->
+<!--Дан див:-->
+<!--<div>&lt;!&ndash;comment&ndash;&gt;<span><b>bold</b>span</span> text </div>-->
+<!--Переберите циклом все его узлы и выведите на экран для текстовых узлов и комментариев их текст, а для узлов-DOM-элементов - их innerHTML.-->
+
+<!--<body>-->
+<!--<div id="elem">&lt;!&ndash;comment&ndash;&gt;<span><b>bold</b>span</span> text </div>-->
+<!--<script>-->
+<!--    let elem = document.getElementById('elem');-->
+<!--    elem.childNodes.forEach(function (child) {-->
+<!--if  (child.nodeType == 3) {-->
+<!--  child.textContent = child.textContent;-->
+<!--}-->
+<!--if (child.nodeType == 8) {-->
+<!--    child.textContent = child.textContent;-->
+<!--}-->
+<!--if (child.nodeType == 1) {-->
+<!--    child.innerHTML = child.innerHTML;-->
+<!--}-->
+<!--    })-->
+<!--</script>-->
+<!--</body>-->
+</html>

@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    <!-- REST-->
+
+    <!--<body>
+    <script>
+    const first = {
+        name: 'Dima',
+        age: 25,
+        width:20,
+    };
+    const data = {
+        color: 'yellow',
+        goal: [],
+        width: 20,
+    };
+    const result = {
+        name: 'Dima',
+        age: 25,
+        color: 'yellow',
+        goal: [],
+        width: 40,
+    }
+
+    const resultObject = Object.assign({},data,result, {newvalue: 'newValue'});
+    console.log(data);
+</script>
+</body>-->
+
+    <!-- SPREAD-->
+    <!--<body>
+    <script>
+        const firstUser = {
+            name: 'Dima',
+            age: 25,
+            width:20,
+        };
+        const data = {
+            color: 'yellow',
+            goal: [],
+            width: 20,
+        };
+        const result = {
+            name: 'Dima',
+            age: 25,
+            color: 'yellow',
+            goal: [],
+            width: 40,
+        };
+
+        const resultObject = {
+            ...firstUser,
+            ...data,
+        }
+        console.log(resultObject);
+
+
+        const firstArray = [1,2,3,4,5];
+        const secondArray = [5,4,3,2,1];
+        // const resultArray = firstArray.concat(secondArray);
+        const resultArray = [
+            ...firstArray,
+            ...secondArray,
+        ]
+        console.log(resultArray);
+
+    </script>
+    </body>-->
+
+
+    <!-- FOR OF-->
+
+    <!--<body>
+    <script>
+        function  getSum(){
+    for (let value of arguments){
+        console.log(value);
+    }
+        }
+
+        getSum(4, 5, 6);
+    </script>
+    </body>-->
+
+    <!-- SYMBOL-->
+    <!--<body>
+    <script>
+        const id = Symbol();
+        const user = {
+            name: 'Dima',
+            age: 25,
+            width: 20,
+            [id]: 'some text',
+        };
+        user.id = 'new ID';
+        console.log(user[id]);
+
+        for (let key in user) {
+            console.log(user[key]);
+        }
+        // const first = Symbol('first');
+        // const second = Symbol('first');
+        // console.log(first === second); //false
+
+        const first = Symbol.for('first');
+        const second = Symbol.for('first');
+        console.log(first === second); //true
+
+        console.log(Symbol.keyFor(first));
+
+    </script>
+    </body>-->
+
+    <!--<body>
+    <script>
+        // const numbers = [1, 2, 3, 4, 5, 6,];
+        // let result = numbers.reduce((result, item) => {
+        //     return result + item;
+        // })
+
+        // console.log(result);
+        //
+        // const obj = {
+        //     name: 'Dima',
+        //     getName: function () {
+        //         function getFullName() {
+        //             return this.name + 'Vladimirovich'
+        //         }
+        //
+        //     }
+        // }
+        // console.log(obj.getName());
+
+
+        // const obj = {
+        //     name: 'Dima',
+        //     getName: function () {
+        //         const getFullName = () => {
+        //             return this.name + ' Vladimirovich'
+        //         }
+        //         return getFullName();
+        //     }
+        // }
+        // console.log(obj.getName());
+    </script>
+    </body>-->
+
+    <!--<body>
+    <script>
+        // const user = new Map();
+        // const func = () => {alert('hi')};
+        // const obj = {name: 'Sergey'};
+        // const arr = [1,2,3];
+        //
+        // user.set('name', 'Dima');
+        // user.set(func, 'functi');
+        // user.set(obj,{value: 5});
+        // user.set(arr, [3,4,5]);
+
+      // console.log(user.get(func));
+      // console.log(user.get(obj));
+      // console.log(user.get(arr));
+
+        // for (let k of user.keys()){
+        //     console.log(k);
+        // }
+        //
+        // for (let v of user.values())    {
+        //     console.log(v);
+        // }
+        //
+        // for (let e of user.entries())    {
+        //     console.log(e);
+        // }
+
+       // console.log(user.keys()); //MapIterator {"name", ƒ, {…}, Array(3)}
+       // console.log(user.values()); //MapIterator {"Dima", "functi", {…}, Array(3)}
+       // console.log(user.entries());//{"name" => "Dima", ƒ => "functi", {…} => {…}, Array(3) => Array(3)}
+       //
+       //  user.forEach((value,key,map) => {
+       //      console.log(value);
+       //  });
+
+
+        //SET
+        //
+        // const food = new Set();
+        // food.add('Bread');
+        // food.add('Tea');
+        // food.add('Fruits');
+        // console.log(food);
+
+
+
+
+        //Objects
+
+    //     const name = 'Dima';
+    //     const age = 25;
+    //     const color = 'green';
+    //     function getName() {
+    // return this.name;
+    //     }
+    //
+    //     function getPropName() {
+    //         return 'someDynamicValue'
+    //     }
+    //
+    //     const user = {
+    //         name,
+    //         age,
+    //         getName,
+    //         getAge(){
+    //             return this.age;
+    //         },             // getAge: function(){
+    //                              // return this.age
+    //         [1+1]:2,   //вычисляемое свойство
+    //         [getPropName()]: 'some dynamic value',
+    //         [color]:'yellow'
+    //          };
+    //     console.log(user.getName());
+    //     console.log(user.getAge());
+    //     console.log(user);
+
+
+        const name = 'Dima';
+            const age = 25;
+        const user = {
+            name,
+            age,
+            get info() {
+                return `Hello, my name is ${name}, I am ${age}`
+            },
+            set info(str){
+                alert(str);
+            }
+        };
+
+        //console.log(user.info); // Обращение как к свойству, а не методу user.info();
+        console.log(user.info = `some text`); // Обращение с присваиванием;
+    </script>
+    </body>-->
+
+
+<body>
+<script>
+    // function Animal(name) {
+    //     this.name = name;
+    // }
+    //
+    // Animal.prototype.getName = function () {
+    //     return this.name;
+    // };
+
+
+
+    // Альтернатива стр. 253-259;
+    // class Animal {
+    //     constructor(name) {
+    //     this.name = name;
+    //     }
+    //     getName(){
+    //         return this.name;
+    //     }
+    //     setName(name){
+    //         this.name = name;
+    //     }
+    //
+    // }
+    //
+    // const bird = new Animal('bird');
+    // const dog = new Animal('dog');
+    // const cat = new Animal('cat');
+    // const snake = new Animal('snake');
+    //
+    // console.log(bird.getName());
+    // console.log(dog.getName());
+    // console.log(cat.getName());
+    // console.log(snake.getName());
+    //
+    // snake.setName('tiger');
+    // console.log(snake.getName());
+
+
+    class Animal {
+        constructor(name) {
+            this.name = name;
+        }
+        getName(){
+            return this.name;
+        }
+        setName(name){
+            this.name = name;
+        }
+
+    }
+
+//     const bird = new Animal('bird');
+//     const dog = new Animal('dog');
+//     const cat = new Animal('cat');
+//     const snake = new Animal('snake');
+//
+//    function Bird() {
+// Animal.apply(this,arguments) // унаследование от фун. конструктора Animal стр.253-255
+//    }
+//    Bird.prototype = Object.create(Animal.prototype); // унаследование от прототипа стр.257-259
+//    Bird.prototype.constructor = Bird;
+//
+
+//    //Альтренатива по стр.309 - 313;
+    class Bird extends Animal {
+        static  version = '0.0.1';
+        constructor(name) {
+            super(name);// = Animal.apply(this,arguments) . Super это обращение к родительскому классу в данном случае Animal
+            console.log(Bird.version);
+        }
+        getName() {
+            console.log('log from Bird');
+            console.log(super.getName());
+        }
+    }
+
+    const bird = new Bird('kar');
+    bird.getName();
+    </script>
+</body>
+</html>

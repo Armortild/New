@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function test() {
+        let num = 1;
+
+        return function() {
+            alert(num);
+            num++;
+        };
+    };
+
+    let func1 = test(); // первая функция
+    func1();  //выведет 1
+    func1();  //выведет 1
+    func1();  //выведет 1
+
+    let func2 = test(); // вторая функция
+    func2();  //выведет 1
+    func2();  //выведет 1
+    func2();  //выведет 1
+</script>
+</body>
+</html>
