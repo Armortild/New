@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text">
+<button>Press</button>
+<p></p>
+<script>
+    // let input = document.querySelector('input');
+    // let but = document.querySelector('button');
+    // let set = new Set();
+    // but.addEventListener("click", () => {
+    //     let p = document.createElement('p');
+    //     document.body.appendChild(p);
+    //     if (!isNaN(+input.value)){
+    //         set.add(input.value);
+    //         for (let key of set) {
+    //             p.innerHTML += key + ', ';
+    //         }
+    //         p.innerHTML;
+    //
+    //     }
+    //     input.value = ''
+    // })
+    //
+
+    let input = document.querySelector('input');
+    let but = document.querySelector('button');
+    let set = new Set();
+    but.addEventListener("click", () => {
+        let p = document.createElement('p');
+        document.body.appendChild(p);
+        if (!isNaN(+input.value)) {
+            set.add(input.value);
+            for (let key of set) {
+                p.innerHTML += key + ', ';
+            }
+            input.value = ''
+        }
+    })
+</script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //  let promise = new Promise(((resolve, reject) => {
+    //     setTimeout(() => {
+    //         resolve(2)
+    //     }, 2000)
+    // }));
+    // promise.then(result => {
+    //         return result;
+    //     }
+    // ).then(result => {
+    //     return result * result
+    // }).then(result => {
+    //     return console.log(result * result);
+    // })
+
+
+    let promise = new Promise((resolve, reject) => {
+        console.log('1');
+        setTimeout(() => {
+            // resolve(2)
+            reject('error')
+        }, 2000)
+    });
+    promise.then(result => {
+            return new Promise((resolve, reject) => {
+                console.log('2');
+                setTimeout(() => {
+                    resolve(result * result)
+                }, 2000)
+            });
+        },
+        error => {
+            alert(error);
+            throw new Error('awful error');
+        }
+    ).then(result => {
+        return new Promise((resolve, reject) => {
+            console.log('3');
+            setTimeout(() => {
+                resolve(result * result)
+            }, 2000)
+        });
+    }).then(result => {
+        return console.log(result * result);
+    }
+    ).catch(error => {
+        console.log(error.message);
+    });
+
+</script>
+</body>
+</html>

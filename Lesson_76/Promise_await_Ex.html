@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // function getRandom(min,max) {
+    //     return Math.floor(Math.random() * (max - min +1) + min)
+    // }
+    //
+    // function getNum() {
+    //     return new Promise((resolve, reject) => {
+    //         setTimeout(() =>{
+    //             resolve(getRandom(1,5))
+    //         }, 3000)
+    //     })
+    // };
+    //
+    // async function func() {
+    //     try{
+    //         console.log('Step_1');
+    //         let result = await getNum();
+    //         console.log(result);
+    //         console.log('Step_2');
+    //         console.log(result * result);
+    //     }catch(e) {
+    //         console.log(e + "Error");
+    //     }
+    // }
+    // func();
+
+
+    function getRandom(min, max) {
+        return Math.floor(Math.random() * (max - min + 1) + min)
+    };
+
+    function getNum1() {
+        return new Promise((resolve, reject) => {
+            setTimeout(() => {
+                if(true){
+                    resolve(getRandom(1, 5))
+                }else {
+                    reject('Negative_1')
+                }
+            },2000)
+        })
+    };
+
+    function getNum2() {
+        return new Promise((resolve, reject) => {
+            setTimeout(() => {
+                if(true){
+                    resolve(getRandom(6, 10))
+                }else {
+                    reject('Negative_2')
+                }
+            },2000)
+        })
+    };
+
+    async function getSum() {
+        try {
+            console.log('Step_1');
+            let result1 = await getNum1();
+            console.log('result_1: '+result1);
+            console.log('Step_2');
+            let result2 = await getNum2();
+            console.log('result_2: '+result2);
+            console.log('Step_3');
+            console.log(result1 + result2);
+        } catch (e) {
+            alert(e);
+        }
+    }
+
+    getSum();
+</script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    let promise = new Promise((resolve, reject) => {
+        let counter = 0;
+        start();
+
+        function start() {
+            let interval = getRandom(1, 5);
+            counter++;
+            console.log(counter, interval);
+            setTimeout(() => {
+                if (interval == 4) {
+                    resolve('Print Resolve')
+                } else if (counter >= 5) {
+                    reject('Print REJECT')
+                } else {
+                    start();
+                }
+            }, interval * 500)
+        }
+    });
+
+    promise.then(
+        result => {
+            alert(result)
+        },
+        error => {
+            alert(error)
+        }
+    );
+
+    function getRandom(min, max) {
+        return Math.floor(Math.random() * (max - min + 1) + min);
+    }
+</script>
+</body>
+</html>
